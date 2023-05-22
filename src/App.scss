@@ -1,0 +1,24 @@
+@import './styles/login';
+@import './styles/sidebar';
+@import './styles/navbar';
+@import './styles/page';
+@import './styles/users';
+@import './styles/dropdown';
+@import './styles/user-details';
+@import './styles/pagination';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Work Sans', 'sans-serif';
+    background-color: #E5E5E5;
+    font-size: 16px;
+    width: 100%;
+    p, h1, h2, h3 {
+    color:#213F7D 
+    }
+ }

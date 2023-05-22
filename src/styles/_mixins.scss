@@ -1,0 +1,38 @@
+
+
+@mixin login-containers {
+    width:50%;
+    display: flex;
+    align-items: center;
+}
+
+@mixin input-field {
+    border-radius: 5px;
+    padding-left: 10px;
+    border: 2px solid rgba(84, 95, 125, 0.15);
+    outline: none;
+    height: 100%;
+    width: 100%;
+}
+
+@mixin sidebar-li {
+    display: flex;
+}
+
+@mixin nav-padding {
+   padding: 20px;
+   height: 70px;
+}
+
+@mixin Card {
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+    padding: 20px;
+}
+
+@mixin media-md {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}

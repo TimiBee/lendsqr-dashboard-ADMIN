@@ -1,0 +1,150 @@
+@import "config";
+@import 'mixins';
+
+.login-container { 
+
+   font-family: 'Mulish', sans-serif; 
+   height: 100vh;
+   display: flex;
+   justify-content: space-between;
+   
+   .hero-container {
+      @include login-containers;
+      justify-content: center;
+      position: relative;
+      
+      img.logo {
+         padding-left: 5%;
+         position: absolute;
+         top: 80px;
+         left: 0px;
+      }
+
+      img.hero {
+         width: 90%;
+      }
+   }
+
+   .login-form {
+      @include login-containers;
+      height: 100vh;
+      background-color: white;
+      padding: 0 120px 0 80px;
+      margin-bottom: 70px;
+
+      h1 {
+         color: $text-secondary; 
+         font-size: 40px;
+         font-weight: 900;
+      }
+      p:nth-child(2) {
+         margin-top: 10px;
+      }
+
+      & > div:nth-child(1) {
+         width:100%;
+         
+         p:first-child {
+
+            &.error {
+            color: rgba(255, 51, 102, 1);
+            } 
+
+            &.success {
+               color: $text-primary;
+            }
+         }
+
+         div:nth-child(1) {
+            margin-top: 50px;  
+         }
+
+         
+         .input-container {
+            height:40px;
+            margin-top: 20px;
+
+            input {
+               @include input-field;
+               &::placeholder {
+                  color:#545F7D;
+               }       
+            } 
+         }
+
+         .input-container:nth-child(3) {
+            position: relative;
+         }
+
+         & span.show {
+            font-size: 12px;
+            font-weight: 600;
+            color: $text-primary;
+            text-transform: uppercase;
+            position:absolute;
+            top:14px;
+            right: 12px;
+            cursor: pointer;
+         }
+
+      }
+      
+      p:nth-last-child(3) {
+        font-size: 12px;
+        font-weight: 600;
+        margin-top: 20px;
+        color: $text-primary;
+        text-transform: uppercase;
+     }
+      p:nth-last-child(2) {
+        font-size: 12px;
+        font-weight: 600;
+        margin-top: 20px;
+        text-transform: uppercase;
+        span {
+         cursor: pointer;
+         color: $text-primary;
+         &:hover {
+            color: $text-secondary;
+         }
+        }
+     }
+
+      button {
+         width: 100%;
+         height: 40px;
+         border-radius: 5px;
+         margin-top: 30px;
+         background-color: $btn-primary;
+         border: none;
+         cursor: pointer;
+         color: white;
+         text-transform: uppercase;
+         &:hover {
+            opacity: 0.8;
+         }
+      }
+   }
+
+}
+
+@include media-md {
+   .login-container {
+      display: block;
+
+      .hero-container {
+         display: none;
+      }
+      .login-form {
+         width: 100%;
+         padding: 0 20px;
+
+         h1 {
+            text-align: center;
+         }
+         p:nth-child(2) {
+            text-align: center;
+         }
+      }
+   }
+}

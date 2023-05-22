@@ -1,0 +1,13 @@
+@import "mixins";
+
+.page {
+    padding: 100px 20px 100px 350px;
+    width: 100%;
+    overflow: hidden;
+}
+
+@include media-md {
+    .page {
+        padding: 100px 20px;
+    }
+}
